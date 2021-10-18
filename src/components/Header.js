@@ -1,32 +1,32 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+import useAuth from '../Context/useAuth';
+import logo from './logo.png'
 
 const Header = () => {
+    const {user,logOut} = useAuth()  
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="primary" expand="lg">
             <Container>
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand className="text-white" href="#"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                 <Nav
+                  
                     className="ms-auto my-2 my-lg-0"
-                    style={{ maxHeight: '100px' }}
+                    style={{ maxHeight: '100px',color: 'white' }}
                     navbarScroll
                 >
-                    <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">Login page</Nav.Link>
-                    {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5">
-                        Something else here
-                    </NavDropdown.Item>
-                    </NavDropdown> */}
-                    <Nav.Link href="#" disabled>
-                    Link
-                    </Nav.Link>
+                    
+                  <Nav.Link as={HashLink} className="text-white" to="/home">Home</Nav.Link>
+                  <Nav.Link as={HashLink} className="text-white" to="/about">About</Nav.Link>
+                  <Nav.Link as={HashLink} className="text-white" to="/details">Details</Nav.Link>
+                  <h6  className="mt-2 mx-3 h-25">{user?.email && user.email}</h6>
+                  
+                    {user?.email? (<Button className="bg-danger rounded px-4" onClick={logOut} variant="primary">LogOut</Button>) : (<Nav.Link as={HashLink} className="text-white bg-danger rounded px-4" to="/login">Login</Nav.Link>) }
+                 
                 </Nav>
                
                
