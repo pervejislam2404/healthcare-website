@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Service from './Service/Service';
 
+
 const Services = () => {
     const [healthService,setHealthService] = useState([])
 
@@ -13,12 +14,12 @@ const Services = () => {
 
 
     return (
-        <div className="row g-5 my-5 container mx-auto">
-
+        <div className="container mx-auto row g-5 my-5 ">
+         
             {
-               healthService.map(item=> <Service item={item}/>)
+               healthService.map((item,index)=> <Service key={index} item={item}/>)
             }
-            
+         
         </div>
     );
 };
