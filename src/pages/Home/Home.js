@@ -4,14 +4,16 @@ import yoga from './yoga.png';
 import mad from './mad.png';
 import phone from './phone.png';
 import Services from '../Services/Services';
-import Instructors from './Instractor/Instructors';
+// import Instructors from './Instractor/Instructors';
+import Article from './Extra/Article';
 
 const Home = () => {
     return (
         <div>
             <Banner/>
             <Services/>
-            <Instructors/>
+            <Article/>
+            
             <div style={{backgroundColor: 'rgb(38,41,45)',color: 'white'}}>
                 <div className="container row mx-auto py-4">
                     <div className="col-12 col-lg-4 text-center py-5">

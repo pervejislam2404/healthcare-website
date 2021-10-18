@@ -1,0 +1,16 @@
+.cart-detail:hover {
+    box-shadow: 10px 5px 8px .6 white!important;
+    transform: scale(1.1)!important;
+    -webkit-transform: scale(1.1)!important;
+    -moz-transform: scale(1.1)!important;
+    -ms-transform: scale(1.1)!important;
+    -o-transform: scale(1.1)!important;
+}
+
+.cart-detail {
+    transition: all.5s;
+    -webkit-transition: all.5s;
+    -moz-transition: all.5s;
+    -ms-transition: all.5s;
+    -o-transition: all.5s;
+}

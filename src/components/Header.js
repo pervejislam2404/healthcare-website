@@ -23,6 +23,7 @@ const Header = () => {
                     
                   <NavLink className="text-white text-decoration-none mt-2 px-4" to="/home">Home</NavLink>
                   <NavLink className="text-white text-decoration-none mt-2 px-4" to="/about">About</NavLink>
+                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/contact">Contact</NavLink>
                   <NavLink className="text-white text-decoration-none mt-2 px-4" to="/details">Details</NavLink>
                   
                   <h6  className="mt-2 mx-3 h-25 text-black">{user?.email && user.email}</h6>

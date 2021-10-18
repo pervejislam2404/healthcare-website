@@ -10,7 +10,7 @@ const Banner = () => {
         <div>
            <Carousel>
 
-            <Carousel.Item style={{height: '60vh'}} className="">
+            <Carousel.Item className="">
                 <img
                
                 className="d-block w-100"
@@ -18,12 +18,12 @@ const Banner = () => {
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3 className="text-black">First slide label</h3>
-                <p className="text-black">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3 style={{fontSize: '3rem'}} className="text-white">Yoga For Everybody</h3>
+                <button className="bg-danger px-5 rounded border-0 py-3 my-4 text-white">MAKE AN APPOINTMENT</button>
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item style={{height: '60vh'}} className="">
+            <Carousel.Item className="">
                 <img
                
                 className="d-block w-100"
@@ -32,12 +32,12 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h3 className="text-black">Second slide label</h3>
-                <p className="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3 style={{fontSize: '3rem'}} className="text-white">Balance Your Life</h3>
+                <button className="bg-danger px-5 rounded border-0 py-3 my-4 text-white">MAKE AN APPOINTMENT</button>
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item style={{height: '60vh'}} className="">
+            <Carousel.Item className="">
                 <img
                 className="d-block w-100"
                 src={bannerThree}
@@ -45,8 +45,8 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h3 className="text-black">Third slide label</h3>
-                <p className="text-black">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <h3 style={{fontSize: '3rem'}} className="text-white">Harmonize Your Body</h3>
+                <button className="bg-danger px-5 rounded border-0 py-3 my-4 text-white">MAKE AN APPOINTMENT</button>
                 </Carousel.Caption>
             </Carousel.Item>
 

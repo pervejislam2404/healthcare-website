@@ -9,6 +9,8 @@ import Details from './pages/Details/Details';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import About from './pages/About/About';
 import NotFound from './components/NotFound';
+import Footer from './components/Footer';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -34,6 +36,11 @@ function App() {
                <About/>
             </Route>
 
+            <Route exact path="/contact">
+               <Contact/>
+            </Route>
+
+
             <PrivateRoute exact path="/details/:id">
                <Details/>
             </PrivateRoute>
@@ -49,6 +56,7 @@ function App() {
  
 
         </Switch>
+        <Footer/>
       </Router>
       </AuthProvider>
     </div>

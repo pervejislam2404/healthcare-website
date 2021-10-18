@@ -9,7 +9,7 @@ const Instructors = () => {
                 <h1 className="my-5 py-4">Meet our most talented Instructors</h1>
                 <div className="row g-4">
                     <div className="col-12 col-lg-4">
-                           <Card>
+                           <Card className="cart">
                             <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvqUrO69nLVxAO9dWCAEFKglm1n7Tpqf6jOA&usqp=CAU" />
                             <Card.Body>
                                 <Card.Title>Elena Brower</Card.Title>
@@ -21,7 +21,7 @@ const Instructors = () => {
                             </Card>
                     </div>
                     <div className="col-12 col-lg-4">
-                    <Card >
+                            <Card className="cart">
                             <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyvJf4zuRBp5ofaSiXr49igz2DpY7HmRrq0Q&usqp=CAU" />
                             <Card.Body>
                                 <Card.Title>Tiffany Cruikshank</Card.Title>
@@ -33,7 +33,7 @@ const Instructors = () => {
                             </Card>
                     </div>
                     <div className="col-12 col-lg-4">
-                    <Card>
+                           <Card className="cart">
                             <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn9jhf_yPg_45yNs8WVNiZ0wbGs-UbCJSTw&usqp=CAU" />
                             <Card.Body>
                                 <Card.Title>Noah Maze</Card.Title>

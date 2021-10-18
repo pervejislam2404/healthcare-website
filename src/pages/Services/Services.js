@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Service from './Service/Service';
+import './Services.css'
 
 
 const Services = () => {
@@ -14,12 +15,14 @@ const Services = () => {
 
 
     return (
-        <div className="container mx-auto row g-5 my-5 ">
+        <div className="p-5 banner">
+            <div className="container mx-auto row g-5 ">
          
-            {
-               healthService.map((item,index)=> <Service key={index} item={item}/>)
-            }
-         
+                    {
+                        healthService.map((item,index)=> <Service key={index} item={item}/>)
+                    }
+      
+            </div>
         </div>
     );
 };
