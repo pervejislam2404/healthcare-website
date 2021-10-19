@@ -40,7 +40,6 @@ function App() {
                <Contact/>
             </PrivateRoute>
 
-
             <PrivateRoute exact path="/details/:id">
                <Details/>
             </PrivateRoute>

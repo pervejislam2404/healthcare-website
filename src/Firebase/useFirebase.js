@@ -49,19 +49,19 @@ const useFirebase = () => {
       }
    
     // user-state-management-function
-    
-    useEffect(()=> {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user)
-           } else {
-            setUser({})
-            }
-          })
-          setIsLoading(false);
-          
-    },[])
 
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({})
+            }
+            setIsLoading(false);
+        });
+        return () => unsubscribed;
+    },[])
 
     return { googleSingIn,signWithEmailPass,createAccount,auth,user,setUser,error,setError, logOut,isLoading,setIsLoading}
 };

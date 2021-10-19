@@ -11,7 +11,7 @@ const Login = () => {
     //  password-state
     const [password,setPassword] = useState(''); 
     const [retypePassword,setRetypePassword] = useState(''); 
-        // user-state-chekcer
+        // user-state-checker
     const [checker,setChecker] = useState(false);
     const [passAlert,setPassAlert] = useState('');
 
@@ -23,7 +23,8 @@ const Login = () => {
   
 
 
-    const {signWithEmailPass, googleSingIn,setUser,error,setError,setIsLoading,createAccount} = useAuth()
+    const {signWithEmailPass, googleSingIn,setUser,error,setError,setIsLoading,createAccount,} = useAuth()
+    
 
     const handleSubmit = (e) => {
        e.preventDefault();
@@ -77,19 +78,19 @@ const Login = () => {
      // google-sign-in
 
     const handleGoogleSingIn = ()=> {
+        setIsLoading(true);
         googleSingIn()
         .then((result) => {                
             const user = result.user;
             history.push(redirectURL);
             setUser(user);
+            setIsLoading(false)
            
         }).catch((error) => {            
             const errorMessage = error.message;          
             setError(errorMessage);
         })
-        .finally(()=>{
-            setIsLoading(false);
-        })
+        .finally(()=>setIsLoading(false))
         
     } 
 
@@ -99,37 +100,31 @@ const Login = () => {
             <div className="container-fluid container-lg mx-auto my-5 row">
             <div className="col-12 col-lg-3"></div>    
             <Form className="p-5 border bg-light col-12 col-lg-6">
-                <h3 className="my-4">{checker? 'Please LogIn': 'Please Register'}</h3>
-
-
-                  {/* email-section */}
+                <h3 className="my-4">{checker? 'Please LogIn': 'Please Register'}</h3>                 
                 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control onChange={(e)=> setEmail(e.target.value)} value={email} className="bg-white border-0 p-2" type="email" placeholder="Enter email" required/>
                 </Form.Group>
                     
-                    {/* password-section */}
-
+                   
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control onChange={(e)=>setPassword(e.target.value)} value={password} className="bg-white border-0 p-2" type="password" placeholder="Password" required/>
                 </Form.Group>
 
-                {/* retype-password-section-with-conditional-rendering */}
+               
 
                {!checker && ( <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control onChange={(e)=>setRetypePassword(e.target.value)} value={retypePassword} className="bg-white border-0 p-2" type="password" placeholder="retype-password" required/>
                 </Form.Group>
                   )}
-
-
-                {/* password-match-missmatch-alert */}
+                
                   
                 { !checker && <p className="text-danger">{passAlert}</p>}
   
-                  {/* user-state-checker */}
+                 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check onChange={(e)=>setChecker(e.target.checked)} type="checkbox" label="have an account?" />
                 </Form.Group>
@@ -139,13 +134,12 @@ const Login = () => {
                  {checker? 'Sign in': 'Sign UP'}
                 </Button>
                 <h5 className="my-4">----------or-------</h5>
-               
-                <button className="border-0 bg-none p-3" onClick={handleGoogleSingIn}><img src={google} alt="" /></button>
-
+                        
+                 <button className="border-0 bg-none p-3" onClick={handleGoogleSingIn}><img src={google} alt="" /></button> 
 
                 <h5>{error}</h5>
-            </Form>
-          
+            </Form>      
+
              <div className="col-12 col-lg-3"></div>
             </div>
         </div>

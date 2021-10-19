@@ -19,11 +19,11 @@ const Service = ({item}) => {
                         {description.slice(0,80)}
                     </Card.Text>              
                 <div className="row">
-                    <div className="col-6">
+                    <div className="col-12 col-lg-6">
                           <Button className="ps-0 my-2" variant="none"><Link className="text-decoration-none bg-warning px-3 text-black rounded py-2 " to={`details/${id}`}>details</Link> </Button>
                     </div>
-                    
-                    <div className="col-6 text-center">
+
+                    <div className="col-12 col-lg-6 text-center">
                         <h5 className="text-danger">{session}</h5>
                         <p className="text-white">{duration}</p>
                     </div>
