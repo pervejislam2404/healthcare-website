@@ -14,7 +14,7 @@ const Service = ({item}) => {
                   <Card.Img className="" variant="top" src={img} />
                 </div>
                 <Card.Body style={{backgroundColor: '#3D2C8D'}}>
-                    <Card.Title className="text-white">{title}</Card.Title> 
+                    <Card.Title className="text-warning">{title}</Card.Title> 
                     <Card.Text className="text-white">
                         {description.slice(0,80)}
                     </Card.Text>              

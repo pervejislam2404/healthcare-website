@@ -11,6 +11,7 @@ import About from './pages/About/About';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import Contact from './pages/Contact/Contact';
+import Trainers from './pages/Trainers/Trainers';
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
 
             <Route exact path="/about">
                <About/>
+            </Route>
+
+            <Route exact path="/trainers">
+               <Trainers/>
             </Route>
 
             <PrivateRoute exact path="/contact">

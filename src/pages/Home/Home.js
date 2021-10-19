@@ -13,10 +13,7 @@ const Home = () => {
         <div>
             <Banner/>
             <Services/>
-            <Article/>
-            
-
-          
+            <Article/>          
 
             <div style={{backgroundColor: 'rgb(38,41,45)',color: 'white'}}>
                 <div className="container row mx-auto py-4">

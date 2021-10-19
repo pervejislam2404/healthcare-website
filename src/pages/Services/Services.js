@@ -16,7 +16,7 @@ const Services = () => {
 
     return (
         <div className="p-5 banner">
-            <div className="container mx-auto row g-5 ">
+            <div className="w-75 mx-auto row g-5 ">
          
                     {
                         healthService.map((item,index)=> <Service key={index} item={item}/>)
