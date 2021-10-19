@@ -4,7 +4,6 @@ import yoga from './yoga.png';
 import mad from './mad.png';
 import phone from './phone.png';
 import Services from '../Services/Services';
-// import Instructors from './Instractor/Instructors';
 import Article from './Extra/Article';
 import Map from '../Contact/Map';
 
