@@ -3,9 +3,10 @@
     height: 100%;
 }
 
+.about-bg {
+    background-color: #091353!important;
+}
 
-/* .gallery-item {
-    border-style: solid;
-    border-width: 2px;
-    border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
-} */
+.top-banner {
+    background-color: #4B3869!important;
+}

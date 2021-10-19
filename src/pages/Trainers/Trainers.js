@@ -14,7 +14,7 @@ const Trainers = () => {
         <div>
             <div className="trainers p-4">
                   <div className="w-75 row g-4 mx-auto my-5">
-                      {trainers.map(item => <Trainer trainer={item}/>)}
+                      {trainers.map((item,index) => <Trainer key={index} trainer={item}/>)}
                   </div>
             </div>
         </div>

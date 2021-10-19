@@ -20,28 +20,28 @@ import gallerySeven from './gallery-seven.jpg'
 
 const About = () => {
     return (
-        <div>
-             <div className="container-fluid">
+        <div className="about-bg">
+             <div className="container-fluid top-banner mt-0 mb-0">
                  <div className="row">
                      <div className="col-12 col-md-6 col-lg-6 text-center pt-5">
                         <div className="container mt-5 px-5">
-                            <h1 className="my-4">Welcome to us</h1>
-                            <p>Is a green studio for holistic health and the arts. We offer classes for core strength, injury recovery and dance, including Zumba, Samba, Hip Hop and Ballet. We also open the space for art, performances and various workshops.</p>
+                            <h1 className="my-4 text-warning">Welcome to us</h1>
+                            <p className="text-light fs-4">Is a green studio for holistic health and the arts. We offer classes for core strength, injury recovery and dance, including Zumba, Samba, Hip Hop and Ballet. We also open the space for art, performances and various workshops.</p>
                         </div>
                         <div className="row mt-5">
                             <div className="col-4">
                                 <img src={flower} alt="" />
-                                <h3 className="text-">outstanding classes</h3>
+                                <h3 className="text-warning">outstanding classes</h3>
 
                             </div>
                             <div className="col-4">
                                 <img src={round} alt="" />
-                                <h3>Top Instructors</h3>
+                                <h3 className="text-warning">Top Instructors</h3>
 
                             </div>
                             <div className="col-4">
                                 <img src={stomach} alt="" />
-                                <h3>Best Amenities</h3>
+                                <h3 className="text-warning">Best Amenities</h3>
 
                             </div>
                         </div>
@@ -56,20 +56,20 @@ const About = () => {
 
 
            <div className="container text-center pt-5">
-               <h1>About Studio</h1>
-               <div className="">
+               <h1 className="text-danger">About Studio</h1>
+               <div className="img-bg py-3">
                    <img src="http://tantra.axiomthemes.com/wp-content/uploads/2017/04/om.png" alt="" />
-                   <h1>Our skills</h1>
-                   <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+                   <h1 className="text-danger">Our skills</h1>
+                   <p className="text-warning fs-4">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
                </div>
-               <div className="">
+               <div className="bg-white">
                    <img className="img-fluid" src="http://tantra.axiomthemes.com/wp-content/uploads/2017/04/hotspot.png" alt="" />
                </div>              
            </div>
 
 
 
-            <div className="my-5">
+            <div className="">
                <div className="container row mx-auto">
                     <div className="col-12 col-md-4 col-lg-4 py-5">
                           <div className="card mb-3 border-0 p-4 shadow-lg">
@@ -124,9 +124,9 @@ const About = () => {
 
 
 
-                    <div className="container mx-auto"> 
+                    <div className="container mx-auto py-5"> 
                             <div className="text-center my-3 py-4">
-                            <h1>Our Gallery</h1>
+                            <h1 className="text-danger">Our Gallery</h1>
                             </div>
                             <div className="row gallery">
                                 <div className="p-2 gallery-item col-6 col-lg-4">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css'
 import { Form,Button } from 'react-bootstrap';
 import useAuth from '../../Context/useAuth';
 import google from './google.png'
@@ -96,27 +97,27 @@ const Login = () => {
 
 
     return (
-        <div>
-            <div className="container-fluid container-lg mx-auto my-5 row">
+        <div className="form-bg container-fluid">
+            <div className="container-fluid container-lg mx-auto my-5 row mb-0 mt-0">
             <div className="col-12 col-lg-3"></div>    
-            <Form className="p-5 border bg-light col-12 col-lg-6">
-                <h3 className="my-4">{checker? 'Please LogIn': 'Please Register'}</h3>                 
+            <Form className="p-5 border col-12 col-lg-6 my-5 banner">
+                <h3 className="my-4 text-danger">{checker? 'Please LogIn': 'Please Register'}</h3>                 
                 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label className="text-danger fs-4">Email address</Form.Label>
                     <Form.Control onChange={(e)=> setEmail(e.target.value)} value={email} className="bg-white border-0 p-2" type="email" placeholder="Enter email" required/>
                 </Form.Group>
                     
                    
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className="text-danger fs-4">Password</Form.Label>
                     <Form.Control onChange={(e)=>setPassword(e.target.value)} value={password} className="bg-white border-0 p-2" type="password" placeholder="Password" required/>
                 </Form.Group>
 
                
 
                {!checker && ( <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label className="text-danger fs-4">Retype Password</Form.Label>
                     <Form.Control onChange={(e)=>setRetypePassword(e.target.value)} value={retypePassword} className="bg-white border-0 p-2" type="password" placeholder="retype-password" required/>
                 </Form.Group>
                   )}
@@ -126,18 +127,18 @@ const Login = () => {
   
                  
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check onChange={(e)=>setChecker(e.target.checked)} type="checkbox" label="have an account?" />
+                    <Form.Check className="text-danger" onChange={(e)=>setChecker(e.target.checked)} type="checkbox" label="have an account?" />
                 </Form.Group>
 
 
                 <Button onClick={handleSubmit} variant="primary" type="submit">
                  {checker? 'Sign in': 'Sign UP'}
                 </Button>
-                <h5 className="my-4">----------or-------</h5>
+                <h5 className="my-4 text-warning">----------or-------</h5>
                         
                  <button className="border-0 bg-none p-3" onClick={handleGoogleSingIn}><img src={google} alt="" /></button> 
 
-                <h5>{error}</h5>
+                <h5 className="text-danger mt-2">{error}</h5>
             </Form>      
 
              <div className="col-12 col-lg-3"></div>
