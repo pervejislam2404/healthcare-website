@@ -5,4 +5,4 @@
 - You can take any Yoga course here 
 - Learn from famous instructors
 - You will get certificate after course 
-- 
+- You will get 24 hours support session

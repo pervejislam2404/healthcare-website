@@ -12,10 +12,10 @@ const Footer = () => {
                     <div className="col-12 col-lg-3 p-3">
                         <h3>CONTACT</h3>
                         <p>If you have any feedback or questions do not hesitate to contact us</p>
-                        <p><i class="fas fa-map-marker-alt p-2 fs-4"></i>YogaX Fitness 1192 Wellington St.
+                        <p><i className="fas fa-map-marker-alt p-2 fs-4"></i>YogaX Fitness 1192 Wellington St.
                          72651 Wellington, North Dakota</p>
-                        <p><i class="fas fa-phone-volume fs-4 p-2"></i>0800 99911122</p>
-                        <p><i class="fas fa-fax fs-4 p-2"></i> 0800 999111223</p>
+                        <p><i className="fas fa-phone-volume fs-4 p-2"></i>0800 99911122</p>
+                        <p><i className="fas fa-fax fs-4 p-2"></i> 0800 999111223</p>
                         <p><i className="fas fa-envelope-open-text p-2 fs-4"></i>info@themetwins.com</p>
 
                     </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                     </div>
                     <div className="col-12 col-lg-3 p-3">
                         <h3>OPENING HOURS</h3>
-                     <table class="table">
+                     <table className="table">
                         <thead>
                             <tr>
                                 <th scope="col">Monday</th>

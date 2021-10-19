@@ -5,7 +5,7 @@ import SmoothList from 'react-smooth-list';
 import './Service.css'
 
 const Service = ({item}) => {
-    const {id,title,img} = item;
+    const {id,title,img,description} = item;
     return (
         <div className="col-12 col-md-6 col-lg-4">
             <SmoothList>
@@ -14,7 +14,10 @@ const Service = ({item}) => {
                   <Card.Img className="" variant="top" src={img} />
                 </div>
             <Card.Body style={{backgroundColor: '#3D2C8D'}}>
-                <Card.Title className="text-white">{title}</Card.Title>               
+                <Card.Title className="text-white">{title}</Card.Title> 
+                <Card.Text className="text-white">
+                    {description.slice(0,80)}
+                </Card.Text>              
                 <Button className="ps-0 my-2" variant="none"><Link className="text-decoration-none bg-warning px-3 text-black rounded py-2 " to={`details/${id}`}>details</Link> </Button>
             </Card.Body>
             </Card>

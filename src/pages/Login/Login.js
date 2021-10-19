@@ -17,10 +17,10 @@ const Login = () => {
 
 
     const redirectURL = location.state?.from || '/home';
-    console.log(redirectURL);
+    // console.log(redirectURL);
 
 
-    const {signWithEmailPass,auth, googleSingIn,setUser,error,setError,setIsLoading,createAccount} = useAuth()
+    const {signWithEmailPass, googleSingIn,setUser,error,setError,setIsLoading,createAccount} = useAuth()
 
     const handleSubmit = (e) => {
        e.preventDefault();

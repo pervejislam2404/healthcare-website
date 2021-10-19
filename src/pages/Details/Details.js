@@ -14,7 +14,7 @@ const Details = () => {
 
     const matched = HealthServices?.find(item=> item.id=== id);
 
-    console.log(matched);
+    
   
     return (
         <div>
@@ -35,8 +35,18 @@ const Details = () => {
 
                     </div>
 
-                    <div className="col-12 col-lg-6">
-                        this is details {id}
+                    <div className="col-12 col-lg-6 p-5">
+                        <div className="row border">
+                            <div className="col-12 p2">
+                                <img className="img-fluid img-responsive" src={matched?.photo1} alt="" />
+                            </div>
+                            <div className="col-6 p2">
+                                <img className="img-fluid img-responsive" src={matched?.photo2} alt="" />
+                            </div>
+                            <div className="col-6 p-2">
+                                <img style={{width: '100%!important'}} className="img-fluid img-responsive" src={matched?.photo3} alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

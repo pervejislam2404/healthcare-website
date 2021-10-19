@@ -6,6 +6,7 @@ import { Spinner } from 'react-bootstrap';
 
 const PrivateRoute = ({children,...rest}) => {
     const {user,isLoading} = useAuth() 
+    console.log(isLoading,user);
     if(isLoading){
       return <Spinner animation="grow" />
     }
@@ -13,7 +14,7 @@ const PrivateRoute = ({children,...rest}) => {
       <Route
       {...rest}
       render={({ location }) =>
-        user.email ? (
+        user?.email ? (
           children
         ) : (
           <Redirect

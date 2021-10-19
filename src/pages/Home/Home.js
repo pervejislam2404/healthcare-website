@@ -6,6 +6,7 @@ import phone from './phone.png';
 import Services from '../Services/Services';
 // import Instructors from './Instractor/Instructors';
 import Article from './Extra/Article';
+import Map from '../Contact/Map';
 
 const Home = () => {
     return (
@@ -34,7 +35,7 @@ const Home = () => {
                 </div>
             </div>
 
-        
+        <Map/>
         </div>
         
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from './Map';
 
 const Contact = () => {
     return (
@@ -15,7 +16,7 @@ const Contact = () => {
                         <h2>NewYork city</h2>
                         <div className="row bg-light rounded shadow-lg p-3">
                             <div className="col-1">
-                            <i class="fas fa-globe-europe fs-2 text-primary"></i>
+                            <i className="fas fa-globe-europe fs-2 text-primary"></i>
                             </div>
                             <div className="col-11">
                                 <h4>Address</h4>
@@ -25,7 +26,7 @@ const Contact = () => {
 
                         <div className="row bg-light rounded shadow-lg p-3 my-3">
                             <div className="col-1">
-                            <i class="fas fa-envelope-open-text fs-2 text-primary"></i>
+                            <i className="fas fa-envelope-open-text fs-2 text-primary"></i>
                             </div>
                             <div className="col-11">
                                 <h4>Ask some things us</h4>
@@ -36,7 +37,7 @@ const Contact = () => {
 
                         <div className="row bg-light rounded shadow-lg p-3">
                             <div className="col-1">
-                            <i class="fas fa-phone-volume fs-2 text-primary"></i>
+                            <i className="fas fa-phone-volume fs-2 text-primary"></i>
                             </div>
                             <div className="col-11">
                                 <h4>Call Us</h4>
@@ -77,9 +78,10 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="container-fluid">
+            {/* <div className="container-fluid">
             <iframe title="dfdf" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14352.49578747856!2d88.8519996!3d25.9311547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1634589202931!5m2!1sen!2sbd" width="600" height="450"  allowfullscreen="" loading="lazy"></iframe>
-            </div>
+            </div> */}
+            <Map/>
         </div>
     );
 };
