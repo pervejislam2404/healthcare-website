@@ -36,9 +36,9 @@ function App() {
                <About/>
             </Route>
 
-            <Route exact path="/contact">
+            <PrivateRoute exact path="/contact">
                <Contact/>
-            </Route>
+            </PrivateRoute>
 
 
             <PrivateRoute exact path="/details/:id">

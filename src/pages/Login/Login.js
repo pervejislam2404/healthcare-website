@@ -7,8 +7,10 @@ import {useHistory,useLocation} from 'react-router-dom'
 
 const Login = () => {
     const [email,setEmail] = useState('');
+
     const [password,setPassword] = useState(''); 
     const [retypePassword,setRetypePassword] = useState(''); 
+
     const [checker,setChecker] = useState(false);
     const [passAlert,setPassAlert] = useState('');
 
@@ -17,7 +19,7 @@ const Login = () => {
 
 
     const redirectURL = location.state?.from || '/home';
-    // console.log(redirectURL);
+  
 
 
     const {signWithEmailPass, googleSingIn,setUser,error,setError,setIsLoading,createAccount} = useAuth()
@@ -26,37 +28,37 @@ const Login = () => {
        e.preventDefault();
        if(checker){
             signWithEmailPass(email,password)
-            .then((userCredential) => { 
-                    const user = userCredential.user;
-                    setUser(user)
-                    history.push(redirectURL)  
+            .then((result) => { 
+                    const user = result.user;                 
+                    history.push(redirectURL);
+                    setUser(user)  
                     setPassword('')
                     setEmail('')
                 })
                 .catch((error) => {               
                     const errorMessage = error.message;
-                    setError(errorMessage)
+                    setError(errorMessage);
                 })
                 .finally(()=>{
-                    setIsLoading(false)
+                    setIsLoading(false);
                 })
        }else{           
            if(password===retypePassword){
             createAccount(email, password)
-                    .then((userCredential) => {                      
-                        const user = userCredential.user;
-                        setUser(user)
-                        history.push(redirectURL)
+                    .then((result) => {                      
+                        const user = result.user;
+                        history.push(redirectURL);
+                        setUser(user);                       
                         setPassword('')
                         setEmail('')
                         setRetypePassword('')                      
                     })
                     .catch((error) => {                       
                         const errorMessage = error.message;
-                        setError(errorMessage)                       
+                        setError(errorMessage);                       
                     })
                     .finally(()=>{
-                        setIsLoading(false)
+                        setIsLoading(false);
                     })
            }else{
             setPassAlert("password dosen't match")
@@ -71,16 +73,17 @@ const Login = () => {
         googleSingIn()
         .then((result) => {                
             const user = result.user;
-            setUser(user)
-            history.push(redirectURL)
+            history.push(redirectURL);
+            setUser(user);
+           
         }).catch((error) => {            
             const errorMessage = error.message;          
-            setError(errorMessage)
+            setError(errorMessage);
         })
         .finally(()=>{
-            setIsLoading(false)
+            setIsLoading(false);
         })
-        ;
+        
     } 
 
 

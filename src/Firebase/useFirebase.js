@@ -14,10 +14,8 @@ const useFirebase = () => {
     const auth = getAuth();
 
     const googleSingIn =()=> {
-
-        return signInWithPopup(auth, googleProvider)
-           
-    }
+        return signInWithPopup(auth, googleProvider);           
+    };
 
 
     const logOut = ()=> {
@@ -26,51 +24,32 @@ const useFirebase = () => {
             setUser({});
         }).catch((error) => {
             const errorMessage = error.message;
-             setError(errorMessage)
+             setError(errorMessage);
         })
         .finally(()=> {
-            setIsLoading(false)
+            setIsLoading(false);
         })
         ;
     }
 
-    //   const createAccount =  createUserWithEmailAndPassword;
 
-      
-      const createAccount = (email,password) => {
-        return createUserWithEmailAndPassword(auth,email,password)
+    const createAccount = (email,password) => {
+        return createUserWithEmailAndPassword(auth,email,password);
       }
   
 
-    // const signWithEmailPass = (email,password)=> {
-    //     console.log(email, password);
-
+  
       const signWithEmailPass= (email,password)=> {
-       return signInWithEmailAndPassword(auth,email,password)
-      } ;
-    //         .then((userCredential) => { 
-    //             const user = userCredential.user;
-    //             setUser(user)
-    //         })
-    //         .catch((error) => {               
-    //             const errorMessage = error.message;
-    //             setError(errorMessage)
-    //         })
-    //         .finally(()=>{
-    //             setIsLoading(false)
-    //         })
-    //         ;
-
-    // }
-
-
+       return signInWithEmailAndPassword(auth,email,password);
+      }
+   
 
     useEffect(()=> {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user)
            } else {
-            
+            setUser({})
             }
           })
           setIsLoading(false);
