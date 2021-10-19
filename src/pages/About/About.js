@@ -1,10 +1,21 @@
 import React from 'react';
+import './About.css';
+
+
 import phone from './phone.png';
 import mail from './mail.png';
 import calender from './calender.png'
 import stomach from './stomach.png'
 import round from './round.png'
 import flower from './flower.png'
+
+import galleryOne from './gallaery-one.jpg'
+import galleryTwo from './gallery-two.jpg'
+import galleryThree from './gallery-three.jpg'
+import galleryFour from './gallery-four.jpg'
+import galleryFive from './gallery-five.jpg'
+import gallerySix from './gallery-six.jpg'
+import gallerySeven from './gallery-seven.jpg'
 
 
 const About = () => {
@@ -111,6 +122,50 @@ const About = () => {
                             </div>
                             </div>
                     </div>
+
+
+
+                    <div className="container mx-auto"> 
+                    <div className="text-center my-3 py-4">
+                       <h1>Our Gallery</h1>
+                    </div>
+                    <div className="row gallery">
+                        <div className="p-2 gallery-item col-6 col-lg-4">
+                            <img className="img-fluid" src={galleryOne} alt="" />
+                        </div>
+
+                        <div className="p-2 gallery-item col-6 col-lg-4">
+                            <img className="img-fluid" src={galleryTwo} alt="" />
+                        </div>
+
+                        <div className="p-2 gallery-item col-6 col-lg-4">
+                           <img className="img-fluid" src={galleryThree} alt="" />
+                        </div>
+
+                        <div className="p-2 gallery-item col-6 col-lg-8">
+                                <img className="img-fluid" src={galleryFive} alt="" />
+                            </div>
+
+                        <div className="p-2 gallery-item col-4 col-lg-4">
+                                <img className="img-fluid" src={galleryFour} alt="" />
+                            
+                        </div>
+                                    
+                        <div className="p-2 gallery-item col-4 col-lg-4">
+                            <img className="img-fluid" src={gallerySeven} alt="" />
+                           
+                        </div>
+
+                        <div className="p-2 gallery-item col-4 col-lg-8 ">
+                            <img className="img-fluid" src={gallerySix} alt="" />
+                        </div>
+                    </div>
+
+                    </div>
+
+
+
+                    
 
                 </div>
             </div>
