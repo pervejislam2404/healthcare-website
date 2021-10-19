@@ -13,10 +13,13 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
+    // google-sing-in
+
     const googleSingIn =()=> {
         return signInWithPopup(auth, googleProvider);           
     };
 
+    //  logout-function
 
     const logOut = ()=> {
         const auth = getAuth();
@@ -32,18 +35,21 @@ const useFirebase = () => {
         ;
     }
 
+        //  creating-account-with-email-pass
 
     const createAccount = (email,password) => {
         return createUserWithEmailAndPassword(auth,email,password);
       }
   
 
-  
+    //    sign-in-with-email-pass
+
       const signWithEmailPass= (email,password)=> {
        return signInWithEmailAndPassword(auth,email,password);
       }
    
-
+    // user-state-management-function
+    
     useEffect(()=> {
         onAuthStateChanged(auth, (user) => {
             if (user) {

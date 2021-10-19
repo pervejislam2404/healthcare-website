@@ -23,17 +23,13 @@ const Details = () => {
                 <div className="row">
 
                     <div className="row col-12 col-lg-6 p-5">
-
                       <div className="col-12">
                           <img style={{width: '100%'}} className="img-fluid" src={matched?.img} alt="" />
                       </div>
-
                       <div className="col-12">
                           <h3 className="my-2">{matched?.title}</h3>
                           <p>{matched?.description}</p>
-
                       </div>
-
                     </div>
 
                     <div className="col-12 col-lg-6 p-5 detail">
@@ -49,6 +45,7 @@ const Details = () => {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
            

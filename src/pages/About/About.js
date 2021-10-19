@@ -53,6 +53,8 @@ const About = () => {
                      </div>
                  </div>
              </div>
+
+
            <div className="container text-center pt-5">
                <h1>About Studio</h1>
                <div className="">
@@ -62,14 +64,13 @@ const About = () => {
                </div>
                <div className="">
                    <img className="img-fluid" src="http://tantra.axiomthemes.com/wp-content/uploads/2017/04/hotspot.png" alt="" />
-               </div>
-              
-              
+               </div>              
            </div>
+
+
+
             <div className="my-5">
-
                <div className="container row mx-auto">
-
                     <div className="col-12 col-md-4 col-lg-4 py-5">
                           <div className="card mb-3 border-0 p-4 shadow-lg">
                              <div className="row g-0">
@@ -79,8 +80,7 @@ const About = () => {
                                 <div className="col-12 col-md-8 col-md-8">
                                     <div className="card-body">
                                         <h5 className="card-title text-danger">+86425786424314</h5>
-                                        <p className="card-text">Hotline available 24 hours</p>
-                                    
+                                        <p className="card-text">Hotline available 24 hours</p>                                    
                                     </div>
                                 </div>
                             </div>
@@ -115,8 +115,7 @@ const About = () => {
                                 <div className="col-12 col-md-8 col-md-8">
                                     <div className="card-body">
                                         <h5 className="card-title text-danger">1192 Wellington St.</h5>
-                                        <p className="card-text">72651 Wellington,Dakota</p>
-                                    
+                                        <p className="card-text">72651 Wellington,Dakota</p>                                    
                                     </div>
                                 </div>
                             </div>
@@ -126,46 +125,39 @@ const About = () => {
 
 
                     <div className="container mx-auto"> 
-                    <div className="text-center my-3 py-4">
-                       <h1>Our Gallery</h1>
-                    </div>
-                    <div className="row gallery">
-                        <div className="p-2 gallery-item col-6 col-lg-4">
-                            <img className="img-fluid" src={galleryOne} alt="" />
-                        </div>
-
-                        <div className="p-2 gallery-item col-6 col-lg-4">
-                            <img className="img-fluid" src={galleryTwo} alt="" />
-                        </div>
-
-                        <div className="p-2 gallery-item col-6 col-lg-4">
-                           <img className="img-fluid" src={galleryThree} alt="" />
-                        </div>
-
-                        <div className="p-2 gallery-item col-6 col-lg-8">
-                                <img className="img-fluid" src={galleryFive} alt="" />
+                            <div className="text-center my-3 py-4">
+                            <h1>Our Gallery</h1>
                             </div>
+                            <div className="row gallery">
+                                <div className="p-2 gallery-item col-6 col-lg-4">
+                                    <img className="img-fluid" src={galleryOne} alt="" />
+                                </div>
 
-                        <div className="p-2 gallery-item col-4 col-lg-4">
-                                <img className="img-fluid" src={galleryFour} alt="" />
-                            
-                        </div>
-                                    
-                        <div className="p-2 gallery-item col-4 col-lg-4">
-                            <img className="img-fluid" src={gallerySeven} alt="" />
-                           
-                        </div>
+                                <div className="p-2 gallery-item col-6 col-lg-4">
+                                    <img className="img-fluid" src={galleryTwo} alt="" />
+                                </div>
 
-                        <div className="p-2 gallery-item col-4 col-lg-8 ">
-                            <img className="img-fluid" src={gallerySix} alt="" />
-                        </div>
-                    </div>
+                                <div className="p-2 gallery-item col-6 col-lg-4">
+                                <img className="img-fluid" src={galleryThree} alt="" />
+                                </div>
 
-                    </div>
+                                <div className="p-2 gallery-item col-6 col-lg-8">
+                                    <img className="img-fluid" src={galleryFive} alt="" />
+                                </div>
 
+                                <div className="p-2 gallery-item col-4 col-lg-4">
+                                    <img className="img-fluid" src={galleryFour} alt="" />                            
+                                </div>
+                                            
+                                <div className="p-2 gallery-item col-4 col-lg-4">
+                                    <img className="img-fluid" src={gallerySeven} alt="" />                           
+                                </div>
 
-
-                    
+                                <div className="p-2 gallery-item col-4 col-lg-8 ">
+                                    <img className="img-fluid" src={gallerySix} alt="" />
+                                </div>
+                            </div>
+                    </div>                    
 
                 </div>
             </div>

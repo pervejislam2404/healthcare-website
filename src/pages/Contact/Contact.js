@@ -7,12 +7,19 @@ const Contact = () => {
             <div className="container mx-auto">
                 <div className="row py-5">
                     <div className="col-lg-6 col-12 px-5">
+                        {/* location */}
+
+
                         <h2>Get in touch</h2>
                         <div className="my-5">
                             <span className="border rounded-pill px-3 py-2 bg-primary text-white me-2 ">Newyork city</span>
                             <span className="border rounded-pill px-3 py-2 mx-2">Los Angeles</span>
                             <span className="border rounded-pill px-3 py-2 mx-2">JackjonVile</span>
                         </div>
+
+                    {/* service-location  */}
+
+
                         <h2>NewYork city</h2>
                         <div className="row bg-light rounded shadow-lg p-3">
                             <div className="col-1">
@@ -44,6 +51,8 @@ const Contact = () => {
                                 <p>+123-456-7890 , 1-800-425-8910</p>               
                             </div>
                         </div>
+
+                        {/* contact-form */}
 
                     </div>
                     <div className="col-lg-6 col-12 p-3">
@@ -78,9 +87,8 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* <div className="container-fluid">
-            <iframe title="dfdf" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14352.49578747856!2d88.8519996!3d25.9311547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1634589202931!5m2!1sen!2sbd" width="600" height="450"  allowfullscreen="" loading="lazy"></iframe>
-            </div> */}
+            {/* google-map */}
+          
             <Map/>
         </div>
     );
