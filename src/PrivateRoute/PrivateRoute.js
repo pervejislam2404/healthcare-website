@@ -6,9 +6,9 @@ import { Spinner } from 'react-bootstrap';
 
 const PrivateRoute = ({children,...rest}) => {
     const {user,isLoading} = useAuth() 
-    // console.log(isLoading,user);
+   
     if(isLoading){
-      return <Spinner animation="grow" />
+      return <Spinner className="w-50 mx-auto mt-5 pt-5" animation="grow" />
     }
     return (
       <Route
