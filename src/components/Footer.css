@@ -1,3 +1,8 @@
 td {
     border: none! important;
 }
+
+.footer {
+    background-color: #334756!important;
+    color: 'white!important';
+}
