@@ -1,27 +1,28 @@
 import React from 'react';
 import Map from './Map';
+import './Contact.css'
 
 const Contact = () => {
     return (
-        <div>
+        <div className="contact-bg">
             <div className="container mx-auto">
                 <div className="row py-5">
                     <div className="col-lg-6 col-12 px-5">
                         {/* location */}
 
 
-                        <h2>Get in touch</h2>
+                        <h2 className="text-danger">Get in touch</h2>
                         <div className="my-5">
-                            <span className="border rounded-pill px-3 py-2 bg-primary text-white me-2 ">Newyork city</span>
-                            <span className="border rounded-pill px-3 py-2 mx-2">Los Angeles</span>
-                            <span className="border rounded-pill px-3 py-2 mx-2">JackjonVile</span>
+                            <span className="border rounded-pill px-3 py-2 bg-warning text-white me-2 ">Newyork city</span>
+                            <span className="border bg-danger rounded-pill px-3 py-2 mx-2 text-white">Los Angeles</span>
+                            <span className="border bg-danger rounded-pill px-3 py-2 mx-2 text-white">JackjonVile</span>
                         </div>
 
                     {/* service-location  */}
 
 
-                        <h2>NewYork city</h2>
-                        <div className="row bg-light rounded shadow-lg p-3">
+                        <h2 className="text-danger">NewYork city</h2>
+                        <div className="row bg-danger text-white rounded shadow-lg p-3">
                             <div className="col-1">
                             <i className="fas fa-globe-europe fs-2 text-primary"></i>
                             </div>
@@ -31,7 +32,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="row bg-light rounded shadow-lg p-3 my-3">
+                        <div className="row bg-danger text-white rounded shadow-lg p-3 my-3">
                             <div className="col-1">
                             <i className="fas fa-envelope-open-text fs-2 text-primary"></i>
                             </div>
@@ -42,7 +43,7 @@ const Contact = () => {
                         </div>
 
 
-                        <div className="row bg-light rounded shadow-lg p-3">
+                        <div className="row bg-danger text-white rounded shadow-lg p-3">
                             <div className="col-1">
                             <i className="fas fa-phone-volume fs-2 text-primary"></i>
                             </div>
@@ -56,7 +57,7 @@ const Contact = () => {
 
                     </div>
                     <div className="col-lg-6 col-12 p-3">
-                        <h2 className="mb-5">Send us message</h2>
+                        <h2 className="mb-5 text-danger">Send us message</h2>
                         <div className="row">
                             <div className="col-6 p-2">
                                 <input className="w-100 p-2 rounded" type="text" placeholder="your name"/>

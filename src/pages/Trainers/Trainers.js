@@ -9,7 +9,7 @@ const Trainers = () => {
         fetch('https://raw.githubusercontent.com/pervejislam2404/yoga-data/main/trainers.json')
         .then(res=> res.json())
         .then(data=> setTrainers(data))
-    })
+    },[])
     return (
         <div>
             <div className="trainers p-4">
