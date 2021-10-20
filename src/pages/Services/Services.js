@@ -16,12 +16,14 @@ const Services = () => {
 
     return (
         <div className="p-5 banner">
-            <div className="w-75 mx-auto row g-5 ">
-         
-                    {
+            <div className="row">
+                <div className="col-12 col-lg-2"></div>
+                <div className="col-12 col-lg-8 row g-lg-5 g-3">
+                   {
                         healthService.map((item,index)=> <Service key={index} item={item}/>)
                     }
-      
+                </div>                  
+                 <div className="col-12 col-lg-2"></div>
             </div>
         </div>
     );
