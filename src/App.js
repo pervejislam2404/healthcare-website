@@ -47,11 +47,7 @@ function App() {
 
             <PrivateRoute exact path="/details/:id">
                <Details/>
-            </PrivateRoute>
-
-            <PrivateRoute exact path="/details">
-               <Details/>
-            </PrivateRoute>
+            </PrivateRoute>         
 
             <Route exact path="*">
                <NotFound/>

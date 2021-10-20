@@ -1,3 +1,11 @@
 .contact-bg {
     background-color: #091353!important;
 }
+
+input::placeholder {
+    color: grey!important;
+}
+
+input {
+    border: none;
+}

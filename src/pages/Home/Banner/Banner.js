@@ -1,4 +1,5 @@
 import React from 'react';
+import './Banner.css'
 import { Carousel } from 'react-bootstrap';
 
 import bannerOne from './banner-one.jpg'
@@ -7,13 +8,12 @@ import bannerThree from './banner-three.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div  className="banner-section overflow-hidden">
            <Carousel>
-  {/* slider */}
-
-            <Carousel.Item className="">
+ 
+            <Carousel.Item  className="banner-section">
                 <img               
-                className="d-block w-100"
+                className="d-block w-100 banner-img"
                 src={bannerOne}
                 alt="First slide"
                 />
@@ -23,9 +23,9 @@ const Banner = () => {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item className="">
+            <Carousel.Item className="banner-section">
                 <img               
-                className="d-block w-100"
+                className="d-block w-100 banner-img"
                 src={bannerTwo}
                 alt="Second slide"
                 />
@@ -35,9 +35,9 @@ const Banner = () => {
                 </Carousel.Caption>
             </Carousel.Item>
 
-            <Carousel.Item className="">
+            <Carousel.Item className="banner-section">
                 <img
-                className="d-block w-100"
+                className="d-block w-100 banner-img"
                 src={bannerThree}
                 alt="Third slide"
                 />

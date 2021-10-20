@@ -20,13 +20,12 @@ const Header = () => {
                     navbarScroll
                 >
                     
-                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/home">Home</NavLink>
-                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/trainers">Trainers</NavLink>
-                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/about">About</NavLink>
-                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/contact">Contact</NavLink>
-                  <NavLink className="text-white text-decoration-none mt-2 px-4" to="/details">Details</NavLink>
-                  
-                  <h6  className="mt-2 mx-3 h-25 text-black">{user?.email && user.email}</h6>
+                  <NavLink className="text-white text-decoration-none mt-2 px-4 fs-5" to="/home">Home</NavLink>
+                  <NavLink className="text-white text-decoration-none mt-2 px-4 fs-5" to="/trainers">Trainers</NavLink>
+                  <NavLink className="text-white text-decoration-none mt-2 px-4 fs-5" to="/about">About</NavLink>
+                  <NavLink className="text-white text-decoration-none mt-2 px-4 fs-5" to="/contact">Contact</NavLink>
+                 
+                  <h6  className="pt-2 fs-5 mx-2 h-25 text-black">{user?.email && user.email}</h6>
                   
                     {user?.email? (<Button className="bg-danger rounded px-4" onClick={logOut} variant="primary">LogOut</Button>) : (<Nav.Link as={HashLink} className="text-white bg-danger rounded px-4" to="/login">Login</Nav.Link>) }
                  

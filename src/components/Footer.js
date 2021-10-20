@@ -32,39 +32,39 @@ const Footer = () => {
                     </div>
                     <div className="col-12 col-lg-3 p-3">
                         <h3 className="text-danger">OPENING HOURS</h3>
-                     <table className="table text-warning fs-4">
+                     <table className="table text-warning fs-5">
                         <thead>
                             <tr>
                                 <th scope="col">Monday</th>
-                                <th scope="col">07:00-17:00</th>                            
+                                <th scope="col">07:00-14:00</th>                            
                             </tr>
                         </thead>
                             <tbody className="border-0">
                                 <tr>
                                     <td>Tuesday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-15:00</td>
                                 </tr>
                                 <tr>
                                     
                                     <td>Wednesday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-12:00</td>
                                 </tr>
                                 <tr>
                                     <td>Thursday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-13:00</td>
                                 </tr>
                                 <tr>
                                     <td>Friday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-11:30</td>
                                 </tr>
                                 <tr>
                                     
                                     <td>Saturday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-12:30</td>
                                 </tr>
                                 <tr>
                                     <td>Sunday</td>
-                                    <td>07:00-17:00</td>
+                                    <td>07:00-15:20</td>
                                 </tr>
                                
                             </tbody>
