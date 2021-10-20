@@ -15,7 +15,7 @@ import Trainers from './pages/Trainers/Trainers';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <AuthProvider>
       <Router>
        <Header/>  

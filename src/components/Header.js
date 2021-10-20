@@ -9,7 +9,7 @@ const Header = () => {
     const {user,logOut} = useAuth()  
     return (
         <div>
-            <Navbar className="sticky-top" bg="primary" expand="lg">
+            <Navbar sticky="top" bg="primary" expand="lg">
             <Container>
                 <Navbar.Brand className="text-white" href="#"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />

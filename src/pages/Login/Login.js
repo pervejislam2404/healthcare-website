@@ -15,14 +15,16 @@ const Login = () => {
         // user-state-checker
     const [checker,setChecker] = useState(false);
     const [passAlert,setPassAlert] = useState('');
+       
+    // user-status-update 
+    const  [status, setStatus] = useState('have an account')
+
 
     const history = useHistory();
     const location = useLocation();
 
 
     const redirectURL = location.state?.from || '/home';
-  
-
 
     const {signWithEmailPass, googleSingIn,setUser,error,setError,setIsLoading,createAccount,} = useAuth()
     
@@ -95,6 +97,17 @@ const Login = () => {
         
     } 
 
+    const handleCheck=(e)=>{
+        const sts = e.target.checked;
+        setChecker(sts)
+
+        if(!checker){
+        setStatus('sign up')
+        }else{
+            setStatus('have an account?')
+        }
+    }
+
 
     return (
         <div className="form-bg container-fluid">
@@ -127,16 +140,18 @@ const Login = () => {
   
                  
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check className="text-danger" onChange={(e)=>setChecker(e.target.checked)} type="checkbox" label="have an account?" />
+                    <Form.Check className="text-warning" onChange={handleCheck} type="checkbox" label={status} />
                 </Form.Group>
 
 
                 <Button onClick={handleSubmit} variant="primary" type="submit">
                  {checker? 'Sign in': 'Sign UP'}
                 </Button>
+
+               {!checker && <>
                 <h5 className="my-4 text-warning">----------or-------</h5>
                         
-                 <button className="border-0 bg-none p-3" onClick={handleGoogleSingIn}><img src={google} alt="" /></button> 
+                 <button className="border-0 bg-none p-3" onClick={handleGoogleSingIn}><img src={google} alt="" /></button> </>}
 
                 <h5 className="text-danger mt-2">{error}</h5>
             </Form>      

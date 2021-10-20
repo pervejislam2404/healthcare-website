@@ -86,7 +86,7 @@ const Contact = () => {
                             </div>
 
                             <div className="col-12 p-2">
-                            <textarea className="w-100 p-2 rounded bg-dark fs-5 text-muted" value="drop your comment" id="w3review" rows="10" />
+                            <textarea className="w-100 p-2 rounded bg-dark fs-5 text-muted" placeholder="drop your comment" id="w3review" rows="10" />
                             </div>
                             
                         </div>
